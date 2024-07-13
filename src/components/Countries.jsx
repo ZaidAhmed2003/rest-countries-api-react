@@ -45,7 +45,7 @@ const Countries = ({}) => {
       <div
         className={` ${loading ? "justify-start" : "justify-center"} flex items-center`}
       >
-        <div className="grid grid-cols-1 justify-center gap-20 px-10 sm:grid-cols-2 sm:px-0 lg:grid-cols-3 2xl:grid-cols-4">
+        <div className="flex flex-wrap justify-center gap-24 ">
           {loading ? (
             <Loading />
           ) : (
