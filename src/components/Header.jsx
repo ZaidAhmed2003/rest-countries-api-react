@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { IoMoon, IoMoonSharp } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -17,11 +18,13 @@ const Header = () => {
   };
 
   return (
-    <nav className="dark:bg-Dark-Blue-Dark-Mode-Elements bg-white shadow-md">
+    <nav className="bg-white shadow-md dark:bg-Dark-Blue-Dark-Mode-Elements">
       <div className="container mx-auto flex items-center justify-between px-5 py-7">
-        <h1 className="text-2xl font-bold dark:text-white">
-          Where in the world?
-        </h1>
+        <Link to={"/"}>
+          <h1 className="text-2xl font-bold dark:text-white">
+            Where in the world?
+          </h1>
+        </Link>
         <button
           onClick={toggleDarkMode}
           className="flex items-center gap-1 font-semibold dark:text-white"
